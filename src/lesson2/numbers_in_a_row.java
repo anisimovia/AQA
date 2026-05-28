@@ -17,8 +17,8 @@ public class numbers_in_a_row {
                 count_3++;
             }
         }
-        System.out.println("Кол-во 1: " + count_1);
-        System.out.println("Кол-во 2: " + count_2);
-        System.out.println("Кол-во 3: " + count_3);
+        System.out.println("Кол-во цифр 1: " + count_1);
+        System.out.println("Кол-во цифр 2: " + count_2);
+        System.out.println("Кол-во цифр 3: " + count_3);
     }
 }
