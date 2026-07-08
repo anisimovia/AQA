@@ -1,21 +1,21 @@
 package lesson5.practice.task1;
 
-public class Manager extends Employee {
-    private static final int DEFAULT_MANAGER_SALARY = 1000;
+public class QaEngineer extends Employee {
+    private static final int DEFAULT_QAENGINEER_SALARY = 1100;
     private int bonus;
     private Employee mentor;
 
-    public Manager(String name) {
+    public QaEngineer(String name) {
         super(name);
-    }
-
-    public void setBonus(int bonus) {
-        this.bonus = bonus;
     }
 
     @Override
     public int getSalary() {
-        return DEFAULT_MANAGER_SALARY + bonus;
+        return DEFAULT_QAENGINEER_SALARY;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
     }
 
     @Override
@@ -30,21 +30,21 @@ public class Manager extends Employee {
 
     @Override
     public void work() {
-
+        super.work();
     }
 
     @Override
     public boolean isTired() {
-        return false;
+        return super.isTired();
     }
 
     @Override
     public void relax() {
-
+        super.relax();
     }
 
     @Override
     public boolean getVacation() {
-        return false;
+        return super.getVacation();
     }
 }
