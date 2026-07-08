@@ -1,8 +1,9 @@
 package lesson5.practice.task1;
 
-public class Employee {
-    private final static int DEFAULT_SALARY = 100;
+public abstract class Employee implements Workable{
     private String name;
+    private boolean tired;
+    private boolean vacation;
 
     public Employee(String name) {
         this.name = name;
@@ -12,18 +13,37 @@ public class Employee {
         return name;
     }
 
-    public int getSalary(){
-        return DEFAULT_SALARY;
+    public abstract int getSalary();
+
+    public abstract boolean studentFor(Employee e);
+
+    public abstract void setMentor(Employee employee);
+
+    @Override
+    public void work() {
+        System.out.println("Усердно работает");
     }
 
-    public boolean studentFor(Employee e) {
-        return false;
+    @Override
+    public boolean isTired() {
+        return tired;
     }
 
-    public void setMentor(Employee employee) {
-        System.out.println("Нет ментора");
+    @Override
+    public void relax() {
+        System.out.println("Отдыхает");
     }
-    public boolean worksFor(Employee e){
-        return false;
+
+    @Override
+    public boolean getVacation() {
+        return vacation;
+    }
+
+    public void setTired(boolean tired) {
+        this.tired = tired;
+    }
+
+    public void setVacation(boolean vacation) {
+        this.vacation = vacation;
     }
 }

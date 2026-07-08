@@ -5,10 +5,10 @@ public class Customer {
     private String firstName;
     private String secondName;
     private String address;
-    private int cardNumber;
-    private int accountNumber;
+    private String cardNumber;
+    private String accountNumber;
 
-    public Customer(String serName, String firstName, String secondName, String address, int cardNumber, int accountNumber) {
+    public Customer(String serName, String firstName, String secondName, String address, String cardNumber, String accountNumber) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.serName = serName;
@@ -33,11 +33,11 @@ public class Customer {
         return address;
     }
 
-    public int getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 }
